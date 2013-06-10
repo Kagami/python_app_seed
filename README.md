@@ -1,17 +1,11 @@
 Proposal
 ========
 
-Every time when I start to write new python application I needed to do  
-all this boring stuff for creating Makefile, deb packaging scripts,  
-README, setup.py and so on. So I decided to write skeleton that I will  
-just simple clone and focus on making stuff not the routine actions.
+Every time when I start to write new python application I needed to do all this boring stuff for creating Makefile, deb packaging scripts, README, setup.py and so on. So I decided to write skeleton that I will just simple clone and focus on making stuff not the routine actions.
 
-Idea gracefully taken as your can see from the angular-seed,  
-Chaplin Boilerplate, Rails CLI and all that great CoC world.
+Idea gracefully taken as your can see from the angular-seed, Chaplin Boilerplate, Rails CLI and all that great CoC world.
 
-This skeleton should be as simply as possible. I don't want to force  
-you to choose some libraries over others. Just minimal application  
-structure.
+This skeleton should be as simply as possible. I don't want to force you to choose some libraries over others. Just minimal application structure.
 
 TODO
 ====
@@ -25,9 +19,7 @@ TODO
 License
 =======
 
-*(Applies to the skeleton only not to the final application! This is  
-possible because it's just Public Domain and you can use it AS you  
-wish.)*
+*(Applies to the skeleton only not to the final application! This is possible because it's just Public Domain and you can use it AS you wish.)*
 
 ```
 python_app_seed - simple skeleton for the python applications
