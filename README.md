@@ -15,6 +15,7 @@ TODO
 * More comments please
 * Readme for the final app
 * Use dh\_python instead of crappy stdeb
+* Maybe add tests stub
 
 License
 =======
