@@ -8,8 +8,8 @@ env:
 	virtualenv .venv
 
 # Install basic deps
-install-deps: env
-	.venv/bin/pip install -r requirements.txt
+install-deps:
+	.venv/bin/pip install -e .
 
 run:
 	echo "Not implemented yet"
@@ -20,4 +20,4 @@ deb: clean
 		sdist_dsc --debian-version=$(REVISION) bdist_deb
 
 clean:
-	rm -rf build dist deb_dist python_app_seed.egg-info
+	rm -rf build dist deb_dist python_app_seed.egg-info *.egg

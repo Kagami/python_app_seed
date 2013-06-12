@@ -4,6 +4,7 @@
 /dist/
 /deb_dist/
 /python_app_seed.egg-info/
+/*.egg
 
 /python_app_seed.cfg
 /deb/etc/python_app_seed/python_app_seed.cfg

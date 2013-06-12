@@ -1,7 +1,0 @@
-requests==1.2.3
-Flask==0.9
-
-pytest==2.3.5
-coverage==3.6
-
-stdeb==0.6.0

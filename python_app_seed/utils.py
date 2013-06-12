@@ -3,7 +3,6 @@ import os.path as path
 import fnmatch
 from itertools import chain
 
-
 def get_data_files(dirs, rewrites, exclude_dirs, exclude_files):
     """
     Collect data from from specified dirs and provide them in
