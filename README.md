@@ -3,19 +3,19 @@ Proposal
 
 Every time when I start to write new python application I needed to do all this boring stuff for creating Makefile, deb packaging scripts, README, setup.py and so on. So I decided to write skeleton that I will just simple clone and focus on making stuff not the routine actions.
 
-Idea gracefully taken as your can see from the angular-seed, Chaplin Boilerplate, Rails CLI and all that great CoC world.
+Idea gracefully taken as you can see from the angular-seed, Chaplin Boilerplate, Rails CLI and all that great CoC world.
 
 This skeleton should be as simply as possible. I don't want to force you to choose some libraries over others. Just minimal application structure.
 
 TODO
 ====
 
-* **How to use**
-* Simple config wrapper
-* More comments please
-* Readme for the final app
-* Use dh\_python instead of crappy stdeb
-* Maybe add tests stub
+* How to use
+* Use dh\_python2
+* Add simple config module, wrapper around PyYAML
+* README for the final app
+* Tests stub
+* Docs stub
 
 License
 =======
