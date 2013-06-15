@@ -13,6 +13,7 @@ TODO
 * README for the final app
 * Add simple config module, wrapper around PyYAML
 * Use dh\_python2
+* MANIFEST.in
 * Tests stub
 
 License
