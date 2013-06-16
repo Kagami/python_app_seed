@@ -42,7 +42,12 @@ install-deps: env
 run:
 	$(PYTHON) python_app_seed/main.py
 
-deb: clean
+# Preprocess additional data files
+data:
+	cp python_app_seed.yaml.example \
+		data/etc/python_app_seed/python_app_seed.yaml
+
+deb: clean data
 	dpkg-buildpackage -b -us -uc
 
 clean:

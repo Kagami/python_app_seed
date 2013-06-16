@@ -8,3 +8,4 @@
 /debian/files
 
 /python_app_seed.yaml
+/data/etc/python_app_seed/python_app_seed.yaml

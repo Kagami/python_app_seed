@@ -5,8 +5,8 @@ from itertools import chain
 
 def get_data_files(dirs, rewrites, exclude_dirs, exclude_files):
     """
-    Collect data from from specified dirs and provide them in
-    the setup-friendly format.
+    Collect data from the specified dirs and provide them in
+    distutils-friendly format.
     """
     def _get_data_files(topdir):
         data_files = []

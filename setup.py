@@ -5,9 +5,18 @@ from setuptools import setup
 from python_app_seed.utils import get_data_files
 
 
-DIRS = ['deb']
-REWRITES = [('deb', '/')]
+# Settings for collecting additional data files.
+# Normally you should just recreate structure of the directories
+# from the root in 'data' dir and everything will work.
+#
+# Pathes from where data files will be collected.
+DIRS = ['data']
+# Rewrite rules. In this example all files below 'data' will be placed
+# to the root of the resulted package.
+REWRITES = [('data', '/')]
+# Your could exclude dirs
 EXCLUDE_DIRS = []
+# or separate files. Wirldcard characters are supported.
 EXCLUDE_FILES = ['.*.swp']
 
 
@@ -25,8 +34,6 @@ setup(
         'which may go on '
         'multiple lines.'),
     packages=['python_app_seed'],
-
-    data_files=get_data_files(DIRS, REWRITES, EXCLUDE_DIRS, EXCLUDE_FILES),
 
     # Place all package dependencies in this section. There is not need
     # in requirements.txt or whatever hacky solutions.
@@ -50,4 +57,8 @@ setup(
         'pytest==2.3.5',
         'coverage==3.6',
     ],
+
+    # This line includes additional data files to resulting package.
+    # You could tune settings at the top of this file.
+    data_files=get_data_files(DIRS, REWRITES, EXCLUDE_DIRS, EXCLUDE_FILES),
 )
