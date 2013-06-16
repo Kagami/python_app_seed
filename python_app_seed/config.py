@@ -23,7 +23,6 @@
     >>> # Inside some module of your app
     >>>
     >>> import requests
-    >>>
     >>> from python_app_seed.config import config
     >>>
     >>> def get_page():
@@ -31,11 +30,12 @@
     >>>     return page
 
     You could simple delete this module (and also dependency in
-    setup.py) if you don't like it and want do use something like
+    setup.py) if you don't like it and want to use something like
     ConfigParser.
 
-    Note what YAML config should be a dict otherwise this module
-    doesn't make much sense. You still could use config.items through.
+    Note what your config toplevel structure should be a dict
+    otherwise this module doesn't make much sense. You still could
+    use config.items though.
 """
 
 import yaml
