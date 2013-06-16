@@ -23,7 +23,7 @@ all:
 
 # Provide only debian-based example here since it be the most popular
 install-debian-deps:
-	sudo apt-get install python-virtualenv
+	sudo apt-get install python-virtualenv python-all debhelper fakeroot
 
 # Manage python environment
 env:
@@ -50,9 +50,13 @@ data:
 
 deb: clean data
 	dpkg-buildpackage -b -us -uc
+	# XXX: Files shouldn't go to the outside dir
+	rm ../pythonappseed_*.changes
+	mkdir -p dist/deb/
+	mv ../pythonappseed_*.deb dist/deb/
 
 clean:
-	rm -rf build python_app_seed.egg-info *.egg debian/pythonappseed*
+	rm -rf build dist python_app_seed.egg-info *.egg debian/pythonappseed*
 	rm -rf debian/files
 
 mrproper: clean clean-env

@@ -6,6 +6,7 @@
 /build/
 /debian/pythonappseed*
 /debian/files
+/dist/
 
 /python_app_seed.yaml
 /data/etc/python_app_seed/python_app_seed.yaml
