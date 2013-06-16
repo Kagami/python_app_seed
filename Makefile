@@ -37,9 +37,6 @@ run:
 	$(PYTHON) python_app_seed/main.py
 
 deb: clean
-	cp python_app_seed.cfg.example deb/etc/python_app_seed/python_app_seed.cfg
-	$(PYTHON) setup.py --command-packages=stdeb.command \
-		sdist_dsc --debian-version=$(BUILD_NUMBER) bdist_deb
 
 clean:
 	rm -rf build dist deb_dist python_app_seed.egg-info *.egg

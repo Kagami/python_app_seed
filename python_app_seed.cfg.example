@@ -1,6 +1,0 @@
-[python_app_seed]
-db_login = test
-db_password = secret
-
-port = 8000
-debug = true
