@@ -10,10 +10,9 @@ This skeleton should be as simply as possible. I don't want to force you to choo
 TODO
 ====
 
-* README for the final app
-* Add simple config module, wrapper around PyYAML
 * Use dh\_python2
 * MANIFEST.in
+* README for the final app
 * Tests stub
 
 License

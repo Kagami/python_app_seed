@@ -1,0 +1,10 @@
+# You could read about YAML format here: https://en.wikipedia.org/wiki/YAML
+# It's super simple and could do a lot of things. So don't hurry up to
+# throw it in favor of your lovely (yuck!) ConfigParser.
+# It also has good cross-language support which may be extremely useful.
+
+db_login: test
+db_password: secret
+
+port: 8000
+debug: true
