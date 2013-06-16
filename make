@@ -43,6 +43,7 @@ run:
 	$(PYTHON) python_app_seed/main.py
 
 # Preprocess additional data files
+.PHONY: data
 data:
 	cp python_app_seed.yaml.example \
 		data/etc/python_app_seed/python_app_seed.yaml
