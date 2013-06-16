@@ -4,7 +4,7 @@
 /*.egg
 
 /build/
-/debian/pythonappseed*
+/debian/python-app-seed*
 /debian/files
 /dist/
 

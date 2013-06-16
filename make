@@ -47,12 +47,12 @@ data:
 deb: clean data
 	dpkg-buildpackage -b -us -uc
 	# XXX: Files shouldn't go to the outside dir
-	rm ../pythonappseed_*.changes
+	rm ../python-app-seed_*.changes
 	mkdir -p dist/deb/
-	mv ../pythonappseed_*.deb dist/deb/
+	mv ../python-app-seed_*.deb dist/deb/
 
 clean:
-	rm -rf build dist python_app_seed.egg-info *.egg debian/pythonappseed*
+	rm -rf build dist python_app_seed.egg-info *.egg debian/python-app-seed*
 	rm -rf debian/files
 
 mrproper: clean clean-env

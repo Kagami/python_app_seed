@@ -1,11 +1,11 @@
-Source: pythonappseed
+Source: python-app-seed
 Section: python
 Priority: optional
 Maintainer: Your Name <your+name@example.com>
 Build-Depends: debhelper (>= 7), python-all, python-setuptools
 X-Python-Version: >= 2.6
 
-Package: pythonappseed
+Package: python-app-seed
 Architecture: all
 Depends: ${python:Depends}, ${misc:Depends},
          nginx, cron
