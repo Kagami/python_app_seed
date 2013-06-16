@@ -10,10 +10,14 @@ This skeleton should be as simply as possible. I don't want to force you to choo
 TODO
 ====
 
-* Use dh\_python2
-* MANIFEST.in
 * README for the final app
 * Tests stub
+
+Good to be fixed
+================
+
+* BUILD\_NUMBER, use version for package from the setup.py
+* Don't put deb to the upper dir
 
 License
 =======
