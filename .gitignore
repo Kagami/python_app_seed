@@ -5,5 +5,6 @@
 
 /build/
 /debian/pythonappseed*
+/debian/files
 
 /python_app_seed.yaml
