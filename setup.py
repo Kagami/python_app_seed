@@ -13,15 +13,17 @@ EXCLUDE_FILES = ['.*.swp']
 
 setup(
     # Specify your application related info here.
+    # Reference: http://pythonhosted.org/distribute/setuptools.html
     name='python_app_seed',
     version='0.0.1',
     author='Your Name',
     author_email='your+name@example.com',
     url='http://example.com/',
-    description='Very cool app',
+    description='Short project description',
     long_description=(
-        'Long long long long long '
-        'description.'),
+        'Long project description '
+        'which may go on '
+        'multiple lines.'),
     packages=['python_app_seed'],
 
     data_files=get_data_files(DIRS, REWRITES, EXCLUDE_DIRS, EXCLUDE_FILES),
@@ -37,9 +39,7 @@ setup(
         'python-github==0.1',
     ],
     # If some of the dependencies doesn't present on PyPi you could
-    # specify link to it here. See
-    # http://pythonhosted.org/distribute/setuptools.html for the
-    # details.
+    # specify link to it here.
     dependency_links=[
         # This is only for example. Delete it.
         'git+https://github.com/jmoiron/python-github#egg=python-github-0.1',

@@ -1,6 +1,12 @@
+#!/usr/bin/make -f
+
 ###
 # This Makefile only make sense for developers and CI build bots.
-# It just provides some shortcuts for common routine operations.
+# It provides some shortcuts for common routine operations.
+#
+# Note that this file should be invoked using `./make' and cannot
+# be named as `Makefile' because of some strange debian/rules
+# behaviour while building package.
 ###
 
 VENV=.venv
@@ -40,6 +46,7 @@ deb: clean
 	dpkg-buildpackage -b -us -uc
 
 clean:
-	rm -rf build python_app_seed.egg-info *.egg
+	rm -rf build python_app_seed.egg-info *.egg debian/pythonappseed*
+	rm -rf debian/files
 
 mrproper: clean clean-env
