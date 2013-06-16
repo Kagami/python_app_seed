@@ -2,12 +2,14 @@ Source: pythonappseed
 Section: python
 Priority: optional
 Maintainer: Your Name <your+name@example.com>
-Build-Depends: debhelper (>= 7), python-all (>= 2.6), python-setuptools
+Build-Depends: debhelper (>= 7), python-all, python-setuptools
 X-Python-Version: >= 2.6
 
 Package: pythonappseed
 Architecture: all
 Depends: ${python:Depends}, ${misc:Depends},
          nginx, cron
-Description: Package description
- Long package description.
+Description: Short package description
+ Long package description
+ which may go on
+ multiple lines.

@@ -17,7 +17,8 @@ Good to be fixed
 ================
 
 * BUILD\_NUMBER, use version for package from the setup.py
-* Don't put deb to the upper dir
+* Don't put deb and changes to the upper dir
+* Somehow fix that ugly `./make`
 
 License
 =======
