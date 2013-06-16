@@ -1,9 +1,9 @@
 *.pyc
 /.venv/
-/build/
-/dist/
-/deb_dist/
 /python_app_seed.egg-info/
 /*.egg
+
+/build/
+/debian/pythonappseed*
 
 /python_app_seed.yaml

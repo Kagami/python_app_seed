@@ -1,0 +1,7 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: python_app_seed
+Upstream-Contact: Your Name <your+name@example.com>
+
+Files: *
+Copyright: 2013, Your Company
+License: AllRightsReserved

@@ -37,8 +37,9 @@ run:
 	$(PYTHON) python_app_seed/main.py
 
 deb: clean
+	dpkg-buildpackage -b -us -uc
 
 clean:
-	rm -rf build dist deb_dist python_app_seed.egg-info *.egg
+	rm -rf build python_app_seed.egg-info *.egg
 
 mrproper: clean clean-env
