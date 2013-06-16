@@ -13,10 +13,6 @@ VENV=.venv
 PYTHON=$(VENV)/bin/python
 PIP=$(VENV)/bin/pip
 
-# Build bots could pass this option in environment so generated packages
-# will have it in version.
-BUILD_NUMBER?=0
-
 # Just to be safe what empty `make' command won't do anything
 # unexpectable.
 all:
