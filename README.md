@@ -12,13 +12,7 @@ TODO
 
 * README for the final app
 * Tests stub
-
-Good to be fixed
-================
-
-* BUILD\_NUMBER, use version for package from the setup.py
-* Don't put deb and changes to the upper dir
-* Somehow fix that ugly `./make`
+* Set `debian_revision` from the `BUILD_NUMBER` env variable
 
 License
 =======

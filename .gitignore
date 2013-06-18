@@ -4,9 +4,8 @@
 /*.egg
 
 /build/
-/debian/python-app-seed*
-/debian/files
 /dist/
+/deb_dist/
 
 /python_app_seed.yaml
 /data/etc/python_app_seed/python_app_seed.yaml

@@ -1,12 +1,6 @@
-#!/usr/bin/make -f
-
 ###
 # This Makefile only make sense for developers and CI build bots.
 # It provides some shortcuts for common routine operations.
-#
-# Note that this file should be invoked using `./make' and cannot
-# be named as `Makefile' because of some strange debian/rules
-# behaviour while building package.
 ###
 
 VENV=.venv
@@ -21,7 +15,7 @@ all:
 install-debian-deps:
 	sudo apt-get install python-virtualenv python-all debhelper fakeroot
 
-# Manage python environment
+# Create python environment
 env:
 	virtualenv $(VENV)
 
@@ -44,15 +38,15 @@ data:
 	cp python_app_seed.yaml.example \
 		data/etc/python_app_seed/python_app_seed.yaml
 
+# Build package
 deb: clean data
-	dpkg-buildpackage -b -us -uc
-	# XXX: Files shouldn't go to the outside dir
-	rm ../python-app-seed_*.changes
-	mkdir -p dist/deb/
-	mv ../python-app-seed_*.deb dist/deb/
+	./setup.py sdist
+	mkdir deb_dist
+	tar -C deb_dist -xvf dist/python_app_seed-*.tar.gz
+	cd deb_dist/python_app_seed-*; dpkg-buildpackage -b -us -uc
 
 clean:
-	rm -rf build dist python_app_seed.egg-info *.egg debian/python-app-seed*
-	rm -rf debian/files
+	rm -rf build dist deb_dist python_app_seed.egg-info *.egg
 
 mrproper: clean clean-env
+	find -name '*.pyc' -delete
