@@ -16,7 +16,7 @@ DIRS = ['data']
 REWRITES = [('data', '/')]
 # Your could exclude dirs
 EXCLUDE_DIRS = []
-# or separate files. Wirldcard characters are supported.
+# or separate files. Wildcard characters are supported.
 EXCLUDE_FILES = ['.*.swp']
 
 
@@ -58,7 +58,7 @@ setup(
         'coverage==3.6',
     ],
 
-    # This line includes additional data files to resulting package.
+    # This line includes additional data files to the resulting package.
     # You could tune settings at the top of this file.
     data_files=get_data_files(DIRS, REWRITES, EXCLUDE_DIRS, EXCLUDE_FILES),
 )
