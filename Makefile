@@ -7,8 +7,11 @@ VENV=.venv
 PYTHON=$(VENV)/bin/python
 PIP=$(VENV)/bin/pip
 
-# Just to be safe what empty `make' command won't do anything
-# unexpectable.
+# Build bots could pass this option in environment so generated packages
+# will have it in version. Use something like `BUILD_NUMBER=123 make deb'
+BUILD_NUMBER?=0
+
+# Just to be sure what empty `make' command won't do anything unexpectable
 all:
 
 # Provide only debian-based example here since it be the most popular
@@ -43,6 +46,7 @@ deb: clean data
 	./setup.py sdist
 	mkdir deb_dist
 	tar -C deb_dist -xvf dist/python_app_seed-*.tar.gz
+	./fix-version.sh $(BUILD_NUMBER)
 	cd deb_dist/python_app_seed-*; dpkg-buildpackage -b -us -uc
 
 clean:

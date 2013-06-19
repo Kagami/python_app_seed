@@ -12,7 +12,6 @@ TODO
 
 * README for the final app
 * Tests stub
-* Set `debian_revision` from the `BUILD_NUMBER` env variable
 
 License
 =======
