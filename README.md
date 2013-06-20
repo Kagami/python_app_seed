@@ -10,7 +10,6 @@ This skeleton should be as simply as possible. I don't want to force you to choo
 TODO
 ====
 
-* README for the final app
 * How to use
 
 License

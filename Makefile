@@ -40,6 +40,9 @@ test:
 	$(VENV)/bin/py.test tests/
 
 # Preprocess additional data files
+# In this example we made our config stub available in the resulting
+# deb package so end user will have an idea how the config should be
+# looked like.
 .PHONY: data
 data:
 	cp python_app_seed.yaml.example \
