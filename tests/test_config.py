@@ -22,5 +22,6 @@ class TestConfig(object):
         assert config['test'] is False
 
     def test_clear(self):
+        assert len(config.items) != 0
         config.clear()
         assert len(config.items) == 0
