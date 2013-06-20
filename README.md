@@ -11,7 +11,7 @@ TODO
 ====
 
 * README for the final app
-* Tests stub
+* How to use
 
 License
 =======

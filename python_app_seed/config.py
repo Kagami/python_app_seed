@@ -3,7 +3,7 @@
     ~~~~~~~~~~~~~~~~~~~~~~
 
     This module provides wrapper around PyYAML and initialization
-    facilities. The main point is what you don't need to keep
+    facilities. The main point is that you don't need to keep
     reference to config dict after initialization and pass it all
     the time. Instead you just import mutable reference and it will
     contain all data when you need it.
@@ -33,7 +33,7 @@
     setup.py) if you don't like it and want to use something like
     ConfigParser.
 
-    Note what your config toplevel structure should be a dict
+    Note that your config toplevel structure should be a dict
     otherwise this module doesn't make much sense. You still could
     use config.items though.
 """
@@ -77,10 +77,10 @@ class _ConfigDict(object):
             return self._items[name]
 
     def __getitem__(self, key):
-        if name not in self._items:
-            raise KeyError('No "{0}" config option.'.format(name))
+        if key not in self._items:
+            raise KeyError('No "{0}" config option.'.format(key))
         else:
-            return self._items[name]
+            return self._items[key]
 
     def get(self, name, default=None):
         """

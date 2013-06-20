@@ -1,7 +1,6 @@
 *.pyc
 /.venv/
 /python_app_seed.egg-info/
-/*.egg
 
 /build/
 /dist/

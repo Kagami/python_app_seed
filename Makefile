@@ -30,10 +30,14 @@ re-env: clean-env env
 # Install all python dependencies in separate python environment
 install-deps: env
 	$(PIP) install -e .
+	$(PIP) install -r tests_requirements.txt
 
 # Place your application-related start logic here
 run:
 	$(PYTHON) python_app_seed/main.py
+
+test:
+	$(VENV)/bin/py.test tests/
 
 # Preprocess additional data files
 .PHONY: data
@@ -52,7 +56,7 @@ deb: clean data
 	cd deb_dist/python_app_seed-*; dpkg-buildpackage -b -us -uc
 
 clean:
-	rm -rf build dist deb_dist python_app_seed.egg-info *.egg
+	rm -rf build dist deb_dist python_app_seed.egg-info
 
 mrproper: clean clean-env
 	find -name '*.pyc' -delete

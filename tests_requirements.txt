@@ -1,0 +1,8 @@
+# pytest used as for example tests stub. You could change it to
+# some other test framework or just stay with unittest.
+pytest==2.3.5
+
+# Additional test requirements that may be useful:
+#pytest-cov==1.6
+#pep8==1.4.5
+#tox==1.4.3
