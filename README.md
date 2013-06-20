@@ -7,10 +7,24 @@ Idea gracefully taken as you can see from the angular-seed, Chaplin Boilerplate,
 
 This skeleton should be as simply as possible. I don't want to force you to choose some libraries over others. Just minimal application structure.
 
-TODO
-====
+Usage
+=====
 
-* How to use
+Init
+----
+
+It's recommended to use simple [seeder](https://github.com/Kagami/seeder) utility because there are many places to replace `python_app_seed` string with your own project name and utility do it all for you.
+
+Makefile
+--------
+
+Makefile used for most project operations because it dramatically simplify the things. Read about available commands in the final [README](https://github.com/Kagami/python_app_seed/blob/master/README.final.md) (README of your project; seeder automatically rename it to `README.md`).
+
+Config
+------
+
+Deb package
+-----------
 
 License
 =======
