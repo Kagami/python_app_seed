@@ -46,7 +46,9 @@ deb: clean data
 	./setup.py sdist
 	mkdir deb_dist
 	tar -C deb_dist -xvf dist/python_app_seed-*.tar.gz
-	./fix-version.sh $(BUILD_NUMBER)
+	sh -c '\
+		version="`./setup.py --version`-$(BUILD_NUMBER)" &&\
+		sed -i "1 s/(99999)/($$version)/" deb_dist/*/debian/changelog'
 	cd deb_dist/python_app_seed-*; dpkg-buildpackage -b -us -uc
 
 clean:
