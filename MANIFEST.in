@@ -1,3 +1,2 @@
-global-exclude .*.swp
 graft data
 graft debian

@@ -17,7 +17,7 @@ REWRITES = [('data', '/')]
 # Your could exclude dirs
 EXCLUDE_DIRS = []
 # or separate files. Wildcard characters are supported.
-EXCLUDE_FILES = ['.*.swp']
+EXCLUDE_FILES = []
 
 
 setup(
