@@ -42,5 +42,5 @@ You could pass `REVISION` environment variable to set
 
 ### Other
 
-Don't fear to look at Makefile to find some delicious shortcut.
-Or maybe add your own.
+Don't fear to dive in Makefile to find some useful shortcuts.
+Or maybe to add your own.
