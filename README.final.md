@@ -29,10 +29,10 @@ Bump version in setup.py (recommended) and run:
 
     $ make deb
 
-You could pass `BUILD_NUMBER` environment variable to set
+You could pass `REVISION` environment variable to set
 `debian_revision` number (useful when build on CI bot):
 
-    $ BUILD_NUMBER=123 make deb
+    $ REVISION=123 make deb
 
 ### Manage virtual environment
 

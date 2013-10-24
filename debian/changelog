@@ -2,7 +2,7 @@ python-app-seed (99999) unstable; urgency=low
 
   * Meta change. Must be first in the list. This fake version will be
     automatically replaced on `make deb' with one in the setup.py
-    and for debian_revision BUILD_NUMBER env variable will be used.
+    and for debian_revision REVISION env variable will be used.
     You still could write your important changelog stuff below or
     don't use auto versioning at all (but then your will be required
     to change version in several places at once).

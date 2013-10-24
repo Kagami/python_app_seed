@@ -1,8 +1,44 @@
 #!/usr/bin/env python
 
-from setuptools import setup
+import os
+import os.path as path
+import fnmatch
+from itertools import chain
+from setuptools import setup, find_packages
 
-from python_app_seed.utils import get_data_files
+
+def get_data_files(dirs, rewrites, exclude_dirs, exclude_files):
+    """
+    Collect data from the specified dirs and provide them in
+    distutils-friendly format.
+    """
+    def _get_data_files(topdir):
+        data_files = []
+        for dirname, dirnames, filenames in os.walk(topdir):
+            if dirname in exclude_dirs:
+                continue
+            files = []
+            for filename in filenames:
+                for pattern in exclude_files:
+                    if fnmatch.fnmatch(filename, pattern):
+                        break
+                else:
+                    files.append(path.join(dirname, filename))
+            if not files:
+                continue
+            location = None
+            for from_d, to_d in rewrites:
+                if dirname.startswith(from_d):
+                    location = path.join(to_d, path.relpath(dirname, from_d))
+                    location = path.normpath(location)
+            if location is None:
+                location = dirname
+            data_files.append((location, files))
+        return data_files
+
+    files = map(_get_data_files, dirs)
+    # Flatten list
+    return list(chain.from_iterable(files))
 
 
 # Settings for collecting additional data files.
@@ -33,7 +69,7 @@ setup(
         'Long project description '
         'which may go on '
         'multiple lines.'),
-    packages=['python_app_seed'],
+    packages=find_packages(),
 
     # Place all package dependencies in this section. There is not need
     # in requirements.txt or whatever hacky solutions. Additional
@@ -54,6 +90,6 @@ setup(
     ],
 
     # This line includes additional data files to the resulting package.
-    # You could tune settings at the top of this file.
+    # You could tune settings with the variables above.
     data_files=get_data_files(DIRS, REWRITES, EXCLUDE_DIRS, EXCLUDE_FILES),
 )
