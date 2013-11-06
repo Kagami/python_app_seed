@@ -69,7 +69,7 @@ setup(
         'Long project description '
         'which may go on '
         'multiple lines.'),
-    packages=find_packages(),
+    packages=find_packages(exclude=['tests']),
 
     # Place all package dependencies in this section. There is not need
     # in requirements.txt or whatever hacky solutions. Additional
