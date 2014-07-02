@@ -88,6 +88,12 @@ class _ConfigDict(object):
         default value.
         """
         return self._items.get(name, default)
+        
+    def __iter__(self):
+        return self._items.__iter__()
+
+    def next(self):
+        return self._items.next()
 
     def __setattr__(self, name, value):
         self._items[name] = value
